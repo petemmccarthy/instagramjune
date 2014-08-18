@@ -1,7 +1,13 @@
-<%= form_for @post do |f| %>
+<!-- the default http request file size is 4mb which isnt that big. browsers can split forms into multiple requests to enable larger forms to be posted using 'multipart' -->
+
+<%= form_for @post, html: { multipart: true } do |f| %>
 	<%= f.label :title %>
 	<%= f.text_field :title %>
+
+	<%= f.label :picture %>
+  	<%= f.file_field :picture %>
+
 	<%= f.submit 'Create post' %>
 <% end %>
 
-<!-- Add delete and update functions -->
+<!-- Add, delete and update, functions -->

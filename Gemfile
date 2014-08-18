@@ -31,6 +31,10 @@ group :development, :test do
   gem 'rspec-collection_matchers'
   gem 'capybara'
 end
+
+gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
