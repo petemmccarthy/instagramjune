@@ -14,4 +14,15 @@ class Post < ActiveRecord::Base
 
     # validatoions will stop ppl uploading malicious content (eg executable code)
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
+
+  has_and_belongs_to_many :tags
+
+	def tag_list
+
+	end
+
+	def tag_list=(some_tags)
+
+	end
+
 end
