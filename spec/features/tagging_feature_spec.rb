@@ -11,5 +11,26 @@ describe 'tagging posts' do
 		expect(page).to have_link '#yolo'
 		expect(page).to have_link '#swag'
 	end
+end
 
+describe 'filtering by tags' do
+	before do
+		Post.create(title: 'Post A', tag_list: '#yolo, #swag')
+		Post.create(title: 'Post B', tag_list: '#yolo, #sbob')
+	end
+
+	it 'filters to show only tagged posts' do
+		visit '/posts'
+		click_link '#swag'
+
+		expect(page).to have_css 'h1', text: 'Posts tagged with #swag'
+		expect(page).to have_content 'Post A'
+		expect(page).not_to have_content 'Post B'
+	end
+
+	it 'accessible via pretty URLs' do
+		visit '/tags/swag'
+
+		expect(page).to have_content 'Post A'
+	end
 end
