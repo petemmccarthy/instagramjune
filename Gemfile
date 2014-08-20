@@ -1,4 +1,4 @@
-source 'httsp://rubygems.org'
+source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -29,13 +29,19 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.2'
+  gem 'rspec-rails'
   gem 'rspec-collection_matchers'
   gem 'capybara'
 end
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
+group :production do
+  gem 'rails_12factor'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
