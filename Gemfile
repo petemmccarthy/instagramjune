@@ -5,8 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
-
-gem 'bootstrap-sass', '~> 3.2.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -37,6 +35,9 @@ end
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 group :production do
   gem 'rails_12factor'

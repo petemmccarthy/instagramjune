@@ -44,6 +44,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (2.2.0.20140804)
+      execjs
     aws-sdk (1.51.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
@@ -173,6 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   aws-sdk
   bootstrap-sass (~> 3.2.0)
   capybara
