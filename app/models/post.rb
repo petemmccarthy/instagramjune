@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 	# styles allow you to do various things such as crop, flip, rotate etc
 	# medium: "300x300>" means neither h or w can be >300, but it won't stretch/change aspect ratio
 	has_attached_file :picture, 
-							styles: { medium: "300x300>" },
+								styles: { medium: "300x300>" },
 					  		:storage => :s3,
 # you ste storage to s3 and then pass it 3 bits of info
 					  		:s3_credentials => {
@@ -28,6 +28,5 @@ class Post < ActiveRecord::Base
 			self.tags << Tag.find_or_create_by(text: tag)
 		end
 	end
-
 
 end

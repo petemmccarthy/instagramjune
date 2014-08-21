@@ -1,15 +1,14 @@
-
-	<% if @posts.any? %>
+<% if @posts.any? %>
 		
-		<section class='row'>
-			<%= render @posts %>
-		</section>
+	<section class='row'>
+		<%= render @posts %>
+	</section>
 
 	<% else %>
-			No posts yet	
-	<% end %>
+		No posts yet	
+<% end %>
 
-	<%= link_to new_post_path, class: 'btn btn-lg btn-success' do %>
+<%= link_to new_post_path, class: 'btn btn-lg btn-success' do %>
   <span class='hidden-xs'>New post</span>
   <span class="glyphicon glyphicon-pencil"></span>
 <% end %>

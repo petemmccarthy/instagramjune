@@ -13,7 +13,7 @@ describe 'posts' do
       Post.create(title: 'Hello world')
     end
 
-    it 'display a list of all posts' do
+    it 'displays a list of all posts' do
       visit '/posts'
       expect(page).to have_content 'Hello world'
     end
@@ -30,7 +30,7 @@ describe 'posts' do
       expect(current_path).to eq '/posts'
     end
 
-    it 'displays no image, if no pisture attached' do
+    it 'displays no image, if no picture attached' do
       visit '/posts'
       click_link 'New post'
       fill_in 'Title', with: 'A brand new post'
@@ -43,11 +43,11 @@ describe 'posts' do
       visit '/posts'
       click_link 'New post'
       fill_in 'Title', with: 'A brand new post'
-      # attach_file is a capybara commend
+      # attach_file is a capybara command
       attach_file 'Picture', Rails.root.join('spec/images/old-man1.jpg')
       click_button 'Create post'
-      # what should we have as expectation? we could look for a css img tag?
-      # but this will see ANY img. Therefore, add the specific class
+      # we could look for a css img tag? but this will 
+      # see ANY img. Therefore, add the specific class
       expect(page).to have_css 'img.uploaded-pic'
     end
   end
