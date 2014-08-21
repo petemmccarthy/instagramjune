@@ -9,7 +9,9 @@
 
 		<% if post.picture.present? %>
 			<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
-			<% end %>
+			<% end %><br>
+
+			<p>Taken in <%= link_to post.address, post_map_path(post) %></p>
 
 			<section class='tags hidden-xs'>
 				<% post.tags.each do |tag| %>
