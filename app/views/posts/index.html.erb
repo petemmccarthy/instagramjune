@@ -1,9 +1,11 @@
 <% if @posts.any? %>
 		
-	<section class='row'>
-		<%= render @posts %>
-	</section>
-
+	<% @posts.in_groups_of(3, false) do |post_triplet| %>	
+		<section class='row'>
+			<%= render post_triplet %>
+		</section>
+	<% end %>
+	
 	<% else %>
 		No posts yet	
 <% end %>
