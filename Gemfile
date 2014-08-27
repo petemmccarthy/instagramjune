@@ -32,6 +32,7 @@ group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'warden'
 end
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
