@@ -1,3 +1,33 @@
 == Week9 Makers Academy - Build an Instagram clone
 
 ==================================
+
+Create an Instagram clone to include picture upload, title, tags, pictyre locatio using gmaps and ability to sell pictures.
+
+Technologies used
+-----------------
+
+- Ruby
+- JavaScript
+- HTML5
+- CSS
+- Sass
+- RSpec Rails
+- Capybara
+- Database Cleaner
+- Warden
+- Twitter Bootstrap
+- Rails
+- Devise
+- Amazon AWS (S3)
+- Stripe
+- Gmaps
+- Pusher
+- Paperclip
+- PostgreSQL
+- JQuery
+
+Status
+======
+
+Incomplete.
