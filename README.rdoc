@@ -2,7 +2,7 @@
 
 ==================================
 
-Create an Instagram clone to include picture upload, title, tags, pictyre locatio using gmaps and ability to sell pictures.
+Create an Instagram clone to include picture upload, title, tags, location using and ability to sell pictures.
 
 Technologies used
 -----------------
